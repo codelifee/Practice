@@ -1,0 +1,17 @@
+package part3.ex5.√ﬂªÛ»≠;
+
+public class NewlecExam extends Exam {
+	public static void main(String[] args) {
+		NewlecExam exam = new NewlecExam();
+	}
+
+	@Override
+	public int total() {
+		return 0;
+	}
+
+	@Override
+	public float avg() {
+		return 0;
+	}
+}

@@ -1,0 +1,21 @@
+package part3.ex5.√ﬂªÛ»≠;
+
+public class NewlecExamConsole extends ExamConsole{
+
+	@Override
+	protected Exam makeExam() {
+		return new NewlecExam();
+	}
+
+	@Override
+	protected void onInput(Exam exam) {
+		
+	}
+
+	@Override
+	protected void onPrint() {
+		
+	}
+	
+	
+}

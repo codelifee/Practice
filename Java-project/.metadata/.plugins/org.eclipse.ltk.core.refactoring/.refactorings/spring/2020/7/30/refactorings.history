@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;spring.di.ui.ExanConsole.java&apos; to &apos;ExamConsole.java&apos;&#x0D;&#x0A;- Original project: &apos;spring&apos;&#x0D;&#x0A;- Original element: &apos;spring.di.ui.ExanConsole.java&apos;&#x0D;&#x0A;- Renamed element: &apos;spring.di.ui.ExamConsole.java&apos;" description="Rename compilation unit &apos;ExanConsole.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;spring.di.ui{ExanConsole.java" name="ExamConsole.java" references="false" stamp="1595679015550" version="1.0"/>
+</session>

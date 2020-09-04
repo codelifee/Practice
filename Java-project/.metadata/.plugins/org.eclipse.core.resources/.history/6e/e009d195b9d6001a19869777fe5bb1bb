@@ -1,0 +1,23 @@
+package part3.ex6.인터페이스;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class Program {
+	
+	public static void main(String[] args) throws FileNotFoundException {
+		FileInputStream fis = new FileInputStream("src/part3/ex6/인터페이스/setting.txt");
+		Scanner scan = new Scanner(fis);
+		
+		String className = scan.nextLine();
+		System.out.println();
+		
+		A a = new A();
+		X x = new B();
+		a.setX(x);
+		
+		a.print();
+	}
+	
+}

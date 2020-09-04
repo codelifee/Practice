@@ -1,0 +1,11 @@
+package part3.ex3.Getter¿ÍSetters;
+
+public class Exam {
+	int kor;
+	int eng;
+	int math;
+	
+	public int getKor() {
+		return kor;
+	}
+}
