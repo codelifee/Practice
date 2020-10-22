@@ -2,7 +2,10 @@ package practice;
 
 public class Ex12 {
 	public static void main(String[] args) {
-		double c=10.0; int d=4;
-		double result = c/d;
+		int a=5, b=10;
+		int max=a;
+		
+		max = a>b ? a : b;
+		System.out.println("max is : " + max);
 	}
 }
