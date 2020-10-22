@@ -9,7 +9,7 @@ public class Ex_04 {
 		System.out.println(a);
 		System.out.println(b);
 		
-		String x='a';
+		String x="a";
 		System.out.printf("%c => %d\n", x, (int)x);
 	}
 	

@@ -1,10 +1,8 @@
 package practice;
 
-public class EX_08 {
+public class Ex12 {
 	public static void main(String[] args) {
-		byte a;
-
-		
-		a = 1;
+		float a;
+		a = 0.1;
 	}
 }
