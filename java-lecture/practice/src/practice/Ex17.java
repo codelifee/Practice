@@ -27,18 +27,7 @@ public class Ex17 {
 			} 
 		}
 		
-		scan.close();
-
-		
-		
-//		if (newAge >= 20 && newAge <= 29) {
-		
-//		} elseif (newAge < 20 && newAge > 29) {
-		
-//		} else {
-//			
-//		};
-		
+		scan.close();				
 	}
 	
 }
