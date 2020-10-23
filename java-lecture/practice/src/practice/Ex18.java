@@ -18,7 +18,7 @@ public class Ex18 {
 		
 		//3
 		int g=1000000, h=2000000;
-		long k= (long)g*h; //결과갑이 int로 담겨서 나옴
+		long k= (long)(g*h); //결과갑이 int로 담겨서 나옴
 		System.out.println(k);
 	}
 }

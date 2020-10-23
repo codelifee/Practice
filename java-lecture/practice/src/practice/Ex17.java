@@ -15,7 +15,6 @@ public class Ex17 {
 				System.out.println("I am gonna check your age.");
 				System.out.println("Insert your age here :");
 				String result = scan.nextLine();
-
 				int newAge = Integer.parseInt(result);
 				
 				String ageCheck = (newAge >= 20 && newAge <= 29) ? "20´ë" : "20´ë ¾Æ´Ô";
