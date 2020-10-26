@@ -1,13 +1,17 @@
 package privatePractice;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
-public class MapToList {	
+public class ToList {
 	
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		Mapping[] maps = new Mapping[7];
-				
+		List<Mapping> maps = new ArrayList<Mapping>();
+		
 		for(int i=0; i < 2; i++) {
 			
 			System.out.println("id: ");
@@ -15,13 +19,12 @@ public class MapToList {
 			System.out.println("password: ");
 			String password = scan.nextLine();
 			
-			maps[i] = new Mapping();
-			maps[i].setId(id);
-			maps[i].setPassword(password);						
+			maps.add(new Mapping(id, password));			
 		}
 		
 		for(int i=0; i<2; i++) {
-			System.out.println("id is " + maps[i].getId() + " password is " + maps[i].getPassword());
+			System.out.println(maps.get(i).getId());
+			System.out.println(maps.get(i).getPassword());
 		}
 		
 		scan.close();
