@@ -15,16 +15,18 @@ public class Data09 {
 		  try {
 //			   Double num = Double.parseDouble(string);
 			   int num = Integer.parseInt(string);
+			   System.out.println(string + " is a number");
 			  } catch (NumberFormatException e) {
 			   isNumeric = false;
-			  }
-
-			  if (isNumeric) {
-			   System.out.println(string + " is a number");
-			  } else {
 			   System.out.println(string + " is not a number");
 			  }
-		
+
+//			  if (isNumeric) {
+//			   System.out.println(string + " is a number");
+//			  } else {
+//			   System.out.println(string + " is not a number");
+//			  }
+//		
 		
 		scan.close();
 	}
