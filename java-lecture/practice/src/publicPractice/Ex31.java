@@ -5,21 +5,19 @@ import java.util.Scanner;
 public class Ex31 {
 	
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		int i;
+		int sum = 0;
 		
-		System.out.println("Type a number: ");
-		int count = Integer.parseInt(scan.nextLine());
-		
-		System.out.println("Type a character that you want to type");
-		String cha = scan.nextLine();
-		
-		for (i=0; i<count; i++) {
-			System.out.println(cha);
+		int i=10;
+		while(i > 0) {
+			
+			if(i % 2 == 1) {
+				sum += i;
+			}
+			
+			i-- ;
 		}
 		
-		scan.close();
-		
+		System.out.println("the sum of odd numbers is " + sum);
 	}
 }
 
