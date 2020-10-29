@@ -8,6 +8,7 @@ public class Ex23 {
 	      Scanner scan = new Scanner(System.in);
 	      
 	      System.out.println("Please repectively type in \"one\" number twice");
+	      
 	      System.out.println("First number :");
 	      String firstNum = scan.nextLine();
 	      System.out.println("Second number :");
@@ -17,10 +18,12 @@ public class Ex23 {
 	    
     		  char firstCh =  firstNum.charAt(0);
     		  char secondCh = secondNum.charAt(0);
-    		  int firstInt = Integer.parseInt(String.valueOf(firstCh));
-			  int secondInt = Integer.parseInt(String.valueOf(secondCh));
+    		 
     		  
-    		  if((firstInt >= 1 && firstInt <= 9) && (secondInt >= 1 && secondInt <=9)) {
+    		  if((firstCh >= '1' && firstCh <= '9') && (secondCh >= '1' && secondCh <= '9')) {
+    			  
+    			  int firstInt = Integer.parseInt(firstCh+"");
+    			  int secondInt = Integer.parseInt(secondCh+"");
     			  
     			  int max = 0;
     			  int min = 0;
