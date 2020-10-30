@@ -1,4 +1,4 @@
-package Data;
+package data;
 
 public class Data06 {
 	public static void main(String[] args) {
