@@ -4,18 +4,15 @@ public class Ex10 {
 	
 	public static void main(String[] args) {
 		
-		int i;
-		for(i=1; i<=10; i++) {
-			System.out.println(i);
-		}
-		
-		System.out.println();
-		
-		for(i=1; i<=10; i++) {
-			System.out.println(i);
-			if(i % 3 == 0) {
-				break;
+		exit:
+		for(int a=1; a<=9; a++) {
+			for(int i=1;i<=9;i++) {
+				if(i%3 ==0) {
+					break exit;
+				}
+				System.out.println("i = " + i);
 			}
+			System.out.println("a = " + a);
 		}
 	}
 }
