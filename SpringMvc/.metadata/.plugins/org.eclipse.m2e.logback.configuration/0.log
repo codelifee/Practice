@@ -393,3 +393,5 @@
 2020-11-02 11:13:27,666 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Programming\Projects\Practice\SpringMvc\webprj\src\test\resources
 2020-11-02 11:14:08,532 [Worker-32: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 2020-11-02 11:14:08,534 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Programming\Projects\Practice\SpringMvc\webprj\src\main\resources
+2020-11-02 11:14:08,535 [Worker-32: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-11-02 11:14:08,536 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Programming\Projects\Practice\SpringMvc\webprj\src\test\resources
