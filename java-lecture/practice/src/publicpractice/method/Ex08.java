@@ -4,14 +4,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 class Product {
-	String name;
-	int price;
+	private String name;
+	private int price;
 	
 	public void setName(String name) {
 		this.name = name;
 	}
 	
-	public String getName(String name) {
+	public String getName() {
 		return this.name;
 	}
 	
@@ -19,7 +19,7 @@ class Product {
 		this.price = price;
 	}
 	
-	public int getPrice(int price) {
+	public int getPrice() {
 		return this.price;
 	}
 }
@@ -30,17 +30,18 @@ public class Ex08 {
 		Map<String, Integer> bending = new HashMap<>();
 		Product product = new Product();
 		
-		product.name = "cola";
-		product.price = 1000;
+		product.setName("cola");
+		product.setPrice(1000);
 		
-		bending.put(product.name, product.price);
+		bending.put(product.getName(), product.getPrice());
 		
-		product.name = "chicken";
-		product.price = 8000;
 		
-		bending.put(product.name, product.price);
+		product.setName("chicken");
+		product.setPrice(8000);
 		
-		System.out.println("the menu in the bending machine are : \n" + bending);
+		bending.put(product.getName(), product.getPrice());
+		
+		System.out.println("The menus in the bending machine are : \n" + bending);
 	}
 
 }
