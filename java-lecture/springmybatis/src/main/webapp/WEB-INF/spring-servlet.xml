@@ -15,11 +15,8 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 		 
-		<bean id="/index" class="com.newlecture.web.controller.IndexController">
-		
-		</bean>
-		 
 		<context:component-scan base-package="com.codelifee" />
+		<mvc:annotation-driven />
 		 
 		<beans:bean id="jspViewReslver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 			<beans:property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
