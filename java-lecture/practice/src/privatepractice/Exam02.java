@@ -9,10 +9,10 @@ public class Exam02{
      System.out.println("배열원소 총합="+sum);
     }
      
-    public static int add(int[] arrs) {
+    public static int add(int[] score) {
     	int sum=0;
     	
-    	for(int arr:arrs) {
+    	for(int arr:score) {
     		sum += arr;
     	}
     	
