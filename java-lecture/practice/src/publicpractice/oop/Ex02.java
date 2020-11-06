@@ -1,17 +1,34 @@
 package publicpractice.oop;
 
-class MyDate01 {
-	private int year;
-	private int month;
-	private int day;
+class Car {
+	private String color;
+	private String gearType;
+	private int door;
 	
-	public MyDate01() {
-		
+	Car() {
+		this.color = "white";
+		this.gearType = "auto";
+		this.door = 4;
 	}
+	
+	Car(String color, String gearType, int door) {
+		this.color = color;
+		this.gearType = gearType;
+		this.door = door;
+	}
+	
+	void Print() {
+		System.out.printf("%s, %s, %d \n", color, gearType, door);
+	}
+	
 }
 
 public class Ex02 {
 	public static void main(String[] args) {
-			new MyDate01().getClass();
+			Car c01 = new Car();
+			Car c02 = new Car("red", "auto", 4);
+			
+			c01.Print();
+			c02.Print();
 	}
 }
