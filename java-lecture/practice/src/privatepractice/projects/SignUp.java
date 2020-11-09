@@ -1,25 +1,13 @@
 package privatepractice.projects;
 
 public class SignUp {
-	private int id;
-	private String name;
+	static String id;
+	static String password;
 	
-	SignUp(int id, String name) {
-		this.id = id;
-		this.name = name;
+	SignUp(String _id, String _password) {
+		id = _id;
+		password = _password;
 	}
 	
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
 	
 }

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Account {
 	String customerId;
-	String customerName;
+	String customerPassword;
 	int balance;
 	int previousTransaction;
 //	String action;
@@ -26,81 +26,82 @@ public class Account {
 	public int getPreviousTransaction() {
 		return this.previousTransaction; 
 	}
-	
-	public String checkAccount(SignUp account) {
 		
-		if(account.equals(account.getId()) && account.equals(account.getName())) {
-			return "true";
-		} else {
-			return "false";
-		}
-		
-	}
 	
 	public void showMenu() {
+		Scanner scan = new Scanner(System.in);
 		String action ="";
 		
-		Scanner scan = new Scanner(System.in);
-		System.out.println("please type your id : ");
-		String id = scan.nextLine();
-		this.customerId = id;
 		
-		System.out.println("please type your name : ");
-		String name = scan.nextLine();
-		this.customerName = name;
-
-		System.out.println("Hello " + name + "!");
-		System.out.println("1. Check Balance");
-		System.out.println("2. deposit");
-		System.out.println("3. withdraw");
-		System.out.println("4. getPreviousTransaction");
-		System.out.println("5. exit");
+		System.out.println("Please type your id : ");
+		this.customerId = scan.nextLine();
 		
-		whole:
-		while(true) {
-			
-			System.out.println("Please type your id : ");
-			SignUp account = class.getClass();
-			
-			if(this.checkAccount(_id, _name))
-			
-
-			System.out.print("Please select the menu : ");
-
-
-			int input = Integer.parseInt(scan.nextLine());
-			
-			switch(input) {
-			
-
-			case 1:
-				System.out.println("Your current balance is " + this.balance);
-				break;
+		System.out.println("Please type your password : ");
+		this.customerPassword = scan.nextLine();
 		
-			case 2: 
-				System.out.println("how much money do you want to deposit? : ");
-				int deposit = Integer.parseInt(scan.nextLine());
-				this.deposit(deposit);
-				action = "deposited";
+		
+			if(SignUp.id.equals(this.customerId) 
+					&& SignUp.password.equals(this.customerPassword)) {
 				
-				break;
-			case 3:
-				System.out.println("how much money do you want to withdraw? : ");
-				int withdraw = Integer.parseInt(scan.nextLine());
-				this.withdraw(withdraw);
-				action = "withdrawn";
-				
-				break;
-			case 4:
-				int previous = this.getPreviousTransaction();
+						System.out.println("=============================================");
+						System.out.println("Hello " + this.customerId + "!");
+						System.out.println("1. Check Balance");
+						System.out.println("2. deposit");
+						System.out.println("3. withdraw");
+						System.out.println("4. getPreviousTransaction");
+						System.out.println("5. exit");
+						
+						whole:
+						while(true) {
+							System.out.println("=============================================");
+							System.out.println("Please select the menu : ");
+							System.out.println("=============================================");
 
-				System.out.println(action + " : " + previous);
-				break;
-			case 5:
-				
-				break whole;
-			}
-		}
+
+							int input = Integer.parseInt(scan.nextLine());
+							
+							switch(input) {
+							
+
+							case 1:
+								System.out.println("Your current balance is " + this.balance);
+								System.out.println();
+								System.out.println();
+
+								break;
+						
+							case 2: 
+								System.out.println("how much money do you want to deposit? : ");
+								
+								int deposit = Integer.parseInt(scan.nextLine());
+								this.deposit(deposit);
+								action = "deposited";
+								System.out.println();
+								System.out.println();
+								
+								break;
+							case 3:
+								System.out.println("how much money do you want to withdraw? : ");
+								
+								int withdraw = Integer.parseInt(scan.nextLine());
+								this.withdraw(withdraw);
+								action = "withdrawn";
+								System.out.println();
+								System.out.println();
+								break;
+							case 4:
+								int previous = this.getPreviousTransaction();
+
+								System.out.println(action + " : " + previous);
+								break;
+							case 5:
+								
+								break whole;
+							}
+						}
+					} else {
+						System.out.println("Please check your account");
+					}
 		
 		
 		scan.close();
