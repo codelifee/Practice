@@ -30,7 +30,7 @@ public class Account {
 	
 	public void showMenu() {
 		Scanner scan = new Scanner(System.in);
-		String action ="";
+		String action ="No previous transaction";
 		
 		
 		System.out.println("Please type your id : ");
@@ -65,43 +65,57 @@ public class Account {
 
 							case 1:
 								System.out.println("Your current balance is " + this.balance);
-								System.out.println();
-								System.out.println();
+								System.out.println("\n\n");
 
 								break;
 						
-							case 2: 
+							case 2:
+								
 								System.out.println("how much money do you want to deposit? : ");
 								
 								int deposit = Integer.parseInt(scan.nextLine());
 								this.deposit(deposit);
 								action = "deposited";
-								System.out.println();
-								System.out.println();
+								System.out.println("\n\n");
 								
 								break;
+								
 							case 3:
 								System.out.println("how much money do you want to withdraw? : ");
 								
 								int withdraw = Integer.parseInt(scan.nextLine());
-								this.withdraw(withdraw);
-								action = "withdrawn";
-								System.out.println();
-								System.out.println();
-								break;
+								
+								if(balance >= withdraw) {
+									this.withdraw(withdraw);
+									action = "withdrawn";
+
+									System.out.println("\n\n");
+									break;
+								} else {
+									System.out.println("You only have " + balance);
+									break;
+								}
+									
+								
 							case 4:
 								int previous = this.getPreviousTransaction();
 
-								System.out.println(action + " : " + previous);
+								System.out.println(action + " : " + previous +"\n\n");
 								break;
 							case 5:
 								
 								break whole;
+								
+							default : 
+								System.out.println("Invaild option submitted");
+								break;
 							}
 						}
 					} else {
 						System.out.println("Please check your account");
 					}
+			
+			System.out.println("thank you for using our services");
 		
 		
 		scan.close();
