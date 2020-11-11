@@ -49,7 +49,8 @@ public class UserDAO {
 			return pstmt.executeUpdate();
 			
 		} catch (Exception e) {
-			e.printStackTrace();
+//			e.printStackTrace();
+			System.out.println("Something went wrong");
 		} finally {
 			try {if(conn != null) conn.close();} catch (Exception e) {e.printStackTrace();}
 			try {if(pstmt != null) pstmt.close();} catch (Exception e) {e.printStackTrace();}

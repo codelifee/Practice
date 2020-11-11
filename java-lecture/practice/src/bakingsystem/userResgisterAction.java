@@ -6,7 +6,8 @@ public class userResgisterAction {
 	String id;
 	String password; 
 	
-	public void register() {
+	public int register() {
+		int result = 0;
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.println("Please type your id : ");
@@ -16,13 +17,19 @@ public class userResgisterAction {
 		
 		
 		
-		UserDAO userDAO = new UserDAO();
-		int result = userDAO.join(new UserDTO(id, password));
-		if(result == -1) {
-			System.out.println("it exists");
-		} else {
-			System.out.println("successful");
+		try {
+			UserDAO userDAO = new UserDAO();
+			result = userDAO.join(new UserDTO(id, password));
+			if(result == -1) {
+//				System.out.println("Register Failure");
+			} else {
+				System.out.println("successful");
+			}
+		} catch(Exception e) {
+			System.out.println("database error");
 		}
+		
+		return result;
 		
 		
 	}
@@ -37,8 +44,6 @@ public class userResgisterAction {
 		
 		UserDAO userDAO = new UserDAO();
 		int result = userDAO.login(id, password);
-		
-		
 		
 		return result;
 		
