@@ -2,7 +2,7 @@ package bakingsystem;
 
 import java.util.Scanner;
 
-public class Account {
+public class Account2 {
 	String customerId;
 	String customerPassword;
 	int balance;
@@ -31,21 +31,31 @@ public class Account {
 	public void showMenu() {
 		Scanner scan = new Scanner(System.in);
 		String action ="No previous transaction";
+		userResgisterAction resgister = new userResgisterAction();
+		
+		System.out.println("Do you already have account?");
+		System.out.println("1. Your account exists");
+		System.out.println("2. I want to register");
+		int answer = Integer.parseInt(scan.nextLine());
 		
 		
-		System.out.println("Please type your id : ");
-		this.customerId = scan.nextLine();
+		if(answer == 1) {
+			System.out.println("Great!");
+		} else if (answer == 2) {
+			resgister.register();
+		} else {
+			System.out.println("You should type the right number");
+		}
 		
-		System.out.println("Please type your password : ");
-		this.customerPassword = scan.nextLine();
 		
 		
+		int result = resgister.login();
 		
-			if(SignUp.id.equals(this.customerId) 
-					&& SignUp.password.equals(this.customerPassword)) {
+		
+			if(result == 1) {
 				
 						System.out.println("=============================================");
-						System.out.println("Hello " + this.customerId + "!");
+						System.out.println("Hello !");
 						System.out.println("1. Check Balance");
 						System.out.println("2. deposit");
 						System.out.println("3. withdraw");

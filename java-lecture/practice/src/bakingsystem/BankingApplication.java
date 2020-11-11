@@ -3,11 +3,9 @@ package bakingsystem;
 public class BankingApplication {
 
 	public static void main(String[] args) {
-		Account bank = new Account();
-				
+		Account2 bank = new Account2();
 		
-		new SignUp("sumin", "jung");
-		
+//		new SignUp("sumin", "jung");
 		
 		
 		bank.showMenu();

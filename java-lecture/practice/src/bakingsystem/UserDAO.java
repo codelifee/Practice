@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 public class UserDAO {
 	
 	public int login(String id, String password) {
-		String SQL = "SELECT password FROM USER WHERE user = ?";
+		String SQL = "SELECT password FROM USER WHERE id = ?";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;

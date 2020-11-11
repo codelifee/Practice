@@ -9,5 +9,4 @@ public class SignUp {
 		password = _password;
 	}
 	
-	
 }
