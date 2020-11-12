@@ -1,30 +1,27 @@
 package publicpractice.inter;
 
-
-interface IHello{
-	void sayHello(String name);
+interface I10 {
+	
 }
 
-class Hello implements IHello{
+class InstanceManager {
 
-	@Override
-	public void sayHello(String name) {
-		System.out.println("Hello");
+	public static I10 getInstance() {
+		
 	}
 	
+}
+
+class A10 {
+	void methodA() {
+		I10 i = InstanceManager.getInstance();
+		
+	}
 }
 
 public class Ex02{
 
 	public static void main(String[] args) {
-		IHello hi;
-		
-		hi=new Hello();
-		
-		hi.sayHello("ss");
-		
-		Hello h = (Hello)hi;
-			
 		
 	}
 }
