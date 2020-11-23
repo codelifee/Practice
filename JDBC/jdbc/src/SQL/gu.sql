@@ -20,7 +20,7 @@ select gno_seq.nextval from dual;
 -- dual is the basic table which consist of one column.
 -- it is used for calculation, function
 
-insert into gu (g_no,g_name,g_title,g_cont,g_date) values(gno_seq.nextval,'sumin','title','content',sysdate);
+insert into gu (g_no,g_name,g_title,g_cont,g_date) values(gno_seq.nextval,'su','su','su',sysdate);
 
 select * from gu order by g_no desc;
 
@@ -29,3 +29,7 @@ update gu set g_name='modified name', g_title='modified title', g_cont='modified
 select g_name, g_title, g_cont from gu where g_no=3;
 
 delete from gu where g_no=2;
+
+select * from all_tables where USER='week7';
+
+select * from gu;
